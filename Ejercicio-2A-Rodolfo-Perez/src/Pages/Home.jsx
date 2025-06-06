@@ -33,7 +33,7 @@ const Home = () => {
               <th className="px-4 py-2 border-b">id</th>
               <th className="px-4 py-2 border-b">Stock</th>
               <th className="px-4 py-2 border-b">Precio</th>
-              <th className="px-4 py-2 border-b">Producto</th>
+              <th className="px-4 py-2 border-b">Categoria</th>
               <th className="px-4 py-2 border-b">Acciones</th>
             </tr>
           </thead>
@@ -43,11 +43,11 @@ const Home = () => {
                 key={user.id}
                 className="border-b hover:bg-gray-50 transition-colors"
               >
-                <td className="px-4 py-2">{user.nombre}</td>
-                <td className="px-4 py-2">{user.apellido}</td>
-                <td className="px-4 py-2">{user.correo }</td>
+                <td className="px-4 py-2">{user.id}</td>
+                <td className="px-4 py-2">{user.stock}</td>
+                <td className="px-4 py-2">{user.precio }</td>
                 <td className="px-4 py-2">
-                  {optionSelect.find((opt) => opt.value === user.especialidad)
+                  {optionSelect.find((opt) => opt.value === user.categoria)
                   ?.label || "Sin asignar"}
                 </td> 
                 <td>
